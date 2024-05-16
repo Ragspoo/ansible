@@ -1,0 +1,7 @@
+#vars from inventory level
+- name: vars from inventory
+  hosts: localhost
+  tasks:
+  - name: check vars
+    ansible.builtin.debug:
+      msg: "Hi, {{name}}"
