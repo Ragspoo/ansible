@@ -1,0 +1,10 @@
+#PLAY level variables
+- name: variables concept
+  hosts: localhost
+  vars:
+    course: "devops"
+    name: "Raghu"
+  tasks:
+  - name: check variables
+    ansible.builtin.debug:
+      msg: "Hi, my name is {{name}}, and i'm learning {{course}}"
