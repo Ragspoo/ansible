@@ -1,0 +1,9 @@
+#variables from files
+- name: var from files
+  hosts: localhost
+  vars_files:
+  - variables.yaml
+  tasks:
+  - name: check vars
+    ansible.debug.yaml:
+      msg: "Hi, {{name}}, welcome to my world of {{state}}"
