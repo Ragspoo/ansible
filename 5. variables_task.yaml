@@ -1,0 +1,12 @@
+#task level variables
+- name: task level variables
+  hosts: localhost
+  vars:
+    course: "devops"
+    name: "Ragspoo"
+  tasks: 
+  - name: check variables
+    vars: #task level
+      course: "AWS with devops"
+    ansible.builtin.debug:
+      msg: "Hi, {{name}}, welcome to {{course}} course"
