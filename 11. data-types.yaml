@@ -1,0 +1,13 @@
+- name: data types
+  hosts: localhost
+  vars: 
+    Name: Raghu # key value
+    Skills: # skills is list type
+    - Devops
+    - Shell
+    - Linux
+    - Ansible
+    Experience: #Experience is map type, it contains key value pairs
+      devops: 5
+      aws: 5
+      linux: 5
