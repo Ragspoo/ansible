@@ -11,4 +11,14 @@
       devops: 5
       aws: 5
       linux: 5
-    devops: true #boolean
+    Devops: true #boolean
+  tasks:
+  - name: print key value pair
+    ansible.builtin.debug:
+      msg: "name: {{Name}}"
+  - name: print list
+    ansible.builtin.debug:
+      msg: "Skills: {{Skills}}"
+  - name: print map
+    ansible.builtin.debug:
+      msg: "Experience: {{Experience}}"
