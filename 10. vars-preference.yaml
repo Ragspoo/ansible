@@ -1,0 +1,30 @@
+- name: variables preference
+  hosts: localhost
+  vars_files:
+    variables.yaml
+    vars_prompt:
+    - name: name
+      prompt: please enter ur name
+      private: false
+    - name: wishes
+      prompt: please enter the wish
+      private: false
+  vars:
+  name: "Poori"
+  wishes: "morning"
+  tasks:
+  - name: check precedence
+    vars:
+    name: "Poori"
+    wishes: "afternoon"
+    ansible.builtin.debug:
+      msg: "Hi, {{name}}, good {{wishes}}, it's been a long time have seen u"
+
+
+#1. command line
+#2. task level
+#3. files
+#4. prompt
+#5. play level
+#6. inventory
+#7. roles
