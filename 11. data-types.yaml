@@ -11,3 +11,4 @@
       devops: 5
       aws: 5
       linux: 5
+    devops: true #boolean
